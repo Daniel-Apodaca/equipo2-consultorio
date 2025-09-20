@@ -1,4 +1,4 @@
-Actividad 1.2 – Creación de Repositorio en GitHub (Trabajo en Equipo)
+# Actividad 1.2 – Creación de Repositorio en GitHub (Trabajo en Equipo)
 
 Integrantes:
 
