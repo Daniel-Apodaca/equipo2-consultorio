@@ -1,6 +1,7 @@
 Actividad 1.2 – Creación de Repositorio en GitHub (Trabajo en Equipo)
 
 Integrantes:
+
 -Apodaca Ramírez josé Daniel - 23030500
 
 -Kumagai Mendoza Yosichi - 23030674 
