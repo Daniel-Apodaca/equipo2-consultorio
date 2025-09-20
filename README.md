@@ -2,11 +2,11 @@
 
 **Integrantes:**
 
--Apodaca Ramírez josé Daniel - 23030500
+- Apodaca Ramírez josé Daniel - 23030500
 
--Kumagai Mendoza Yosichi - 23030674 
+- Kumagai Mendoza Yosichi - 23030674 
 
--Vargas Medina Josué - 23030151
+- Vargas Medina Josué - 23030151
 
 
 Proyecto: Sistema de Reservaciones de Consultorio Médico
