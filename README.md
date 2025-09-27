@@ -1,15 +1,13 @@
 # Actividad 1.2 – Creación de Repositorio en GitHub (Trabajo en Equipo)
-
-**Integrantes:**
+Integrantes:
 
 - Apodaca Ramírez josé Daniel - 23030500
 
-- Kumagai Mendoza Yosichi - 23030674 
+- Kumagai Mendoza Yosichi - 23030674
 
 - Vargas Medina Josué - 23030151
 
-
-Proyecto: Sistema de Reservaciones de Consultorio Médico
+## Proyecto: Sistema de Reservaciones de Consultorio Médico
 
 Descripción del proyecto: Se desarrollará una API para gestionar las citas en un consultorio médico. Las funcionalidades principales incluyen:
 
