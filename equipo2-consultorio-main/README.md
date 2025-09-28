@@ -90,3 +90,43 @@ Successfully installed blinker-1.9.0 click-8.3.0 colorama-0.4.6 flask-3.1.2 itsd
   # Repositorio de Referencia:
 
 https://github.com/victorrpt-teacher/tijuamon-api
+
+
+# Diagrama de clases de Mermaid
+
+```mermaid
+classDiagram
+    class Paciente {
+        +String nombre
+        +int edad
+        +String contacto
+    }
+
+    class Doctor {
+        +String nombre
+        +String especialidad
+        +List horarios_disponibles
+    }
+
+    class Consultorio {
+        +String nombre
+        +String direccion
+        +List doctores
+    }
+
+    class Cita {
+        +Date fecha
+        +Time hora
+        +Paciente paciente
+        +Doctor doctor
+        +Consultorio consultorio
+        +String motivo
+    }
+
+    Paciente --> Cita
+    Doctor --> Cita
+    Consultorio --> Cita
+    Consultorio --> Doctor
+```
+
+
