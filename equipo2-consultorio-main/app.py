@@ -1,11 +1,7 @@
-from flask import Flask, render_template
+#punto de entrada que usa create_app() como punto de entrada
+from src import create_app
 
-app = Flask(__name__)
-
-@app.route("/")
-def home():
-    # Página base para verificar que la app corre y se renderiza correctamente
-    return render_template("index.html", titulo="Sistema de Reservaciones de Consultorio Médico API", mensaje="¡Bienvenido a Sistema de Reservaciones de Consultorio Médico")
+app = create_app("src.config.DevelopmentConfig")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
