@@ -1,7 +1,8 @@
-from flask import Flask
-
 import os
 from flask import Flask
+
+from src.extensions import db, migrate
+from src.cli import register_seed_command
 
 def create_app(config_object=None):
     """
@@ -15,16 +16,14 @@ def create_app(config_object=None):
     _load_config(app, config_object)
     _register_blueprints(app)
     _register_extensions(app)
+    _register_cli(app)
+
     return app
 
 
 def _load_config(app, config_object):
     """
     Carga configuración base y permite override por entorno.
-
-    Args:
-        app (Flask): La instancia de la aplicación.
-        config_object (str | None): Ruta al objeto de configuración opcional.
     """
     if config_object:
         app.config.from_object(config_object)
@@ -32,21 +31,25 @@ def _load_config(app, config_object):
         from src.config import Config
         app.config.from_object(Config)
 
+
 def _register_blueprints(app):
     """
     Registra los blueprints principales.
-
-    Args:
-        app (Flask): La instancia de la aplicación.
     """
     from src.api.routes import blueprint as consultorio_bp
-    app.register_blueprint(consultorio_bp)
+    app.register_blueprint(consultorio_bp, url_prefix="/api")
+
 
 def _register_extensions(app):
     """
-    Inicializa extensiones (placeholder).
-
-    Args:
-        app (Flask): La instancia de la aplicación.
+    Inicializa extensiones.
     """
-    pass
+    db.init_app(app)
+    migrate.init_app(app, db)
+
+
+def _register_cli(app):
+    """
+    Registra comandos personalizados.
+    """
+    register_seed_command(app)

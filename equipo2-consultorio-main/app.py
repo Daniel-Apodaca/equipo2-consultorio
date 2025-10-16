@@ -1,7 +1,14 @@
 #punto de entrada que usa create_app() como punto de entrada
 from src import create_app
+from flask import render_template
+
 
 app = create_app("src.config.DevelopmentConfig")
 
-if __name__ == "__main__":
-    app.run()
+@app.route("/")
+def home():
+    return render_template(
+        "index.html",
+        titulo="Sistema de Reservaciones de Consultorio Médico API",
+        mensaje="¡Bienvenido al Sistema de Reservaciones de Consultorio Médico!"
+    )
